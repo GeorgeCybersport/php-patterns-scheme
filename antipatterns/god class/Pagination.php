@@ -21,11 +21,11 @@ final class Pagination
             );
             $this->sendData();
         } catch (PDOException $e) {
-            die($e->getMessage());
+            die($e -> getMessage());
         }
     }
     private function getData(){
-        $this->offset=$_GET["offset"];
+        $this->offset = $_GET["offset"];
         try{
             $amount=$this->sql->query("SELECT COUNT(1) FROM items")
                     ->fetch(PDO::FETCH_ASSOC);
