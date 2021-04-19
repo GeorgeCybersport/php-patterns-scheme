@@ -6,6 +6,7 @@ function checkItem($result, $sql, $itemId, $userId){
             $subtotal=$item['price']*$item['itemAmount']+$item['price'];
             return updateBase($sql, $itemId, $userId, $subtotal);
         } else {
+            
             $startResult = $sql->prepare("SELECT * FROM items WHERE id = ? ");
             $startResult->execute(array($itemId));
             if($startResult) {
