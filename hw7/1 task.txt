@@ -1,6 +1,0 @@
--app/Kernel.php - front controller
-
-с ним взаимодействуют: 
-app/Framework/Registry.php - реестр;
-PhpFileLoader - подгрузка конфига;
-а так же все конктроллеры, на которые он будет ссылаться.
